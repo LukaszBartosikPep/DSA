@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-       int result=0;
+          int result=0;
 
             String[] strSplit=s.split("");
         ArrayList<String> strList=new ArrayList<String>(
@@ -18,15 +18,13 @@ class Solution {
             lengthList.add(strList.get(i));   //this should be the window
             if(lengthList.contains(strList.get(i+1))){
                 int index=lengthList.size();
-                lengthList.remove(0);
-                
+                    lengthList.remove(0);
+                if(lengthList.contains(strList.get(i+1))){
+                    lengthList.remove(0);
+                }
                 ListOfLenghts.add(index);
-            
-        
-            
-            
-           
              }
+             
             }
 
 
